@@ -70,9 +70,15 @@ jobs:
         - nvm install node
         - travis_retry npm install -g yarn
         - gem install fastlane --no-document --quiet
-        - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/deploy_key\n" >> ~/.ssh/config
+        - openssl aes-256-cbc -K $encrypted_50392820d639_key -iv $encrypted_50392820d639_iv -in ./secrets/secrets.tar.enc -out ./secrets/secrets.tar -d
+        - cd ./secrets
+        - ls -l
+        - tar xvf secrets.tar
+        - ls -l
+        - chmod 600 custreprdeploy_key
+        - mv custreprdeploy_key ~/.ssh/  
+        - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/custreprdeploy_key\n" >> ~/.ssh/config
         - ssh-keyscan github.com >> ~/.ssh/known_hosts
-        - chmod 600 ~/.ssh/deploy_key
       install: travis_retry yarn
       script: 
         - cd ios
