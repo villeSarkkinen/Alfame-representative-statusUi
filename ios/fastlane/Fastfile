@@ -16,6 +16,14 @@ setup_travis
 default_platform(:ios)
 
 platform :ios do
+
+  desc "test"
+  lane :test do
+    match(type: "appstore")
+    build_app(scheme: "customerrepresentativestatus",
+    export_method: "app-store")
+  end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     create_keychain(
@@ -35,10 +43,11 @@ platform :ios do
     # increment_build_number(xcodeproj: "customerrepresentativestatus.xcodeproj")
     match(type: "development",
       keychain_name: ENV["KEYCHAIN"],
-      keychain_password: ENV["MYAPP_RELEASE_STORE_PASSWORD"]
+      keychain_password: ENV["MYAPP_RELEASE_STORE_PASSWORD"],
+      type: "appstore"
     )
     build_app(scheme: "customerrepresentativestatus",
-    export_method: "development")
+    export_method: "app-store")
     # upload_to_testflight
   end
 end
