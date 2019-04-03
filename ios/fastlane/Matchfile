@@ -1,4 +1,4 @@
-git_url("https://villeSarkkinen@github.com/villeSarkkinen/certificates.git")
+git_url("git@github.com:villeSarkkinen/certificates.git")
 
 storage_mode("git")
 
