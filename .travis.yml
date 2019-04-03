@@ -83,4 +83,4 @@ jobs:
       install: travis_retry yarn
       script: 
         - cd ios
-        - fastlane beta
+        - fastlane beta --verbose
