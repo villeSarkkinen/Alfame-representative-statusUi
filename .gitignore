@@ -61,3 +61,5 @@ api-*.json
 dist/
 # Secrets
 secrets.tar
+secrets/
+!secrets/secrets.tar.enc
