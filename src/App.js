@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import React, { useReducer } from 'react';
+import { AsyncStorage, SafeAreaView } from 'react-native';
+import { colorRed } from "./components/utils/constants";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import Navigation from './containers/Navigation';
+// import loginReducer from './components/utils/loginReducer';
+// import useAsyncEffect from './components/utils/useAsyncEffect';
+// import * as loginActionCreators from './components/utils/loginActionCreators';
+
+import {Router} from './components/utils/RouterPackage';
+
+const _loginObject = {
+  isAuthenticated: false,
+  email: { isValid: true, msg: "" },
+  password: { isValid: true, msg: "" }
 }
 
-export default App;
+const App = () => {
+/*
+  const [loginObject, dispatch] = useReducer(loginReducer, _loginObject);
+    
+  useAsyncEffect(async () => {
+      const isLoggedIn = await AsyncStorage.getItem('Auth');
+      console.log(isLoggedIn);
+      if (isLoggedIn != null) {
+          dispatch({type: loginActionCreators.loggedIn, payload: null});
+      }
+  },[])
+  */
+
+    return (
+      <SafeAreaView style={{flex: 1, backgroundColor: colorRed}}>
+        <Router>
+          <Navigation />
+        </Router>
+      </SafeAreaView>
+    );
+  }
+
+  export default App;

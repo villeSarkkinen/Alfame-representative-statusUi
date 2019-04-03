@@ -1,0 +1,8 @@
+app_identifier("com.alfame.custreprst") # The bundle identifier of your app
+apple_id("tuki@alfame.com") # Your Apple email address
+
+itc_team_id("119960166") # App Store Connect Team ID
+team_id("5P7D5RL572") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
