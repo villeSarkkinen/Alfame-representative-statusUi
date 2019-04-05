@@ -19,9 +19,10 @@ platform :ios do
 
   desc "test"
   lane :test do
-    match(type: "appstore")
+    # match(type: "appstore")
     build_app(scheme: "customerrepresentativestatus",
-    export_method: "app-store")
+    export_method: "app-store",
+    )
   end
 
   desc "Push a new beta build to TestFlight"
@@ -47,7 +48,8 @@ platform :ios do
       type: "appstore"
     )
     build_app(scheme: "customerrepresentativestatus",
-    export_method: "app-store")
+    export_method: "app-store",
+    )
     # upload_to_testflight
   end
 end
