@@ -85,4 +85,4 @@ jobs:
       script: 
         - cd ios
         - fastlane beta > fastlane.txt
-      after_failure: cat fastlane.txt
+      after_failure: tail -300 fastlane.txt
