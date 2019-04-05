@@ -1,17 +1,6 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+opt_out_usage
 setup_travis
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+
 
 default_platform(:ios)
 
@@ -27,25 +16,12 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    create_keychain(
-      name: ENV["KEYCHAIN"],
-      password: ENV["MYAPP_RELEASE_STORE_PASSWORD"],
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      add_to_search_list: true
-    )
-
-    unlock_keychain(
-      path: ENV["KEYCHAIN"],
-      add_to_search_list: :replace,
-      password: ENV['MYAPP_RELEASE_STORE_PASSWORD']
-    )
+ 
     # increment_build_number(xcodeproj: "customerrepresentativestatus.xcodeproj")
-    match(type: "development",
-      keychain_name: ENV["KEYCHAIN"],
+    match(keychain_name: ENV["KEYCHAIN"],
       keychain_password: ENV["MYAPP_RELEASE_STORE_PASSWORD"],
-      type: "appstore"
+      type: "appstore",
+      readonly: is_ci
     )
     build_app(scheme: "customerrepresentativestatus",
     export_method: "app-store",
