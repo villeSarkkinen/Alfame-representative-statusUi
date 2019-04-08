@@ -33,11 +33,11 @@ platform :ios do
     match(
       keychain_name: ENV["KEYCHAIN"],
       keychain_password: ENV["MYAPP_RELEASE_STORE_PASSWORD"],
-      type: "adhoc",
+      type: "appstore",
       readonly: is_ci
     )
     build_app(scheme: "AlfameRepresentativeStatusUi",
-    export_method: "ad-hoc",
+    export_method: "app-store",
     )
     upload_to_testflight(
       distribute_external: false
