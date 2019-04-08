@@ -13,7 +13,8 @@
     "dev:ios": "react-native run-ios",
     "dev:android": "react-native run-android",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "bundle": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios/assets"
   },
   "dependencies": {
     "axios": "^0.18.0",
