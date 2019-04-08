@@ -1,8 +1,5 @@
-if is_ci
-    git_url("git@github.com:villeSarkkinen/certificates.git")
-else
-    git_url("https://villeSarkkinen@github.com/villeSarkkinen/certificates.git")
-end
+git_url("git@github.com:villeSarkkinen/certificates.git")
+# git_url("https://villeSarkkinen@github.com/villeSarkkinen/certificates.git")
 storage_mode("git")
 
 app_identifier("com.alfame.custreprst")
