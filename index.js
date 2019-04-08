@@ -2,4 +2,5 @@ import {AppRegistry} from 'react-native';
 import App from './src/App';
 
 
-AppRegistry.registerComponent('custrepstatus', () => App);
+
+AppRegistry.registerComponent("AlfameRepresentativeStatusUi", () => App);

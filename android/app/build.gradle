@@ -102,7 +102,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.customerrepresentativestatus"
+        applicationId "com.alfame.custreprst"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

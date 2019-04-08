@@ -10,6 +10,7 @@ import Navigation from './containers/Navigation';
 
 import {Router} from './components/utils/RouterPackage';
 
+
 const _loginObject = {
   isAuthenticated: false,
   email: { isValid: true, msg: "" },

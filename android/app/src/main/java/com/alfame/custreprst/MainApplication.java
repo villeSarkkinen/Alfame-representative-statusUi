@@ -1,4 +1,4 @@
-package com.customerrepresentativestatus;
+package com.alfame.custreprst;
 
 import android.app.Application;
 
