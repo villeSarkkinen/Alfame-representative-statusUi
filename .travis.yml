@@ -86,5 +86,5 @@ jobs:
         - yarn bundle
       script: 
         - cd ios
-        - fastlane beta > fastlane.txt
-      after_failure: tail -100 fastlane.txt && sleep 10
+        - fastlane beta
+      after_failure: sleep 10
