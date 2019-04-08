@@ -7,9 +7,9 @@ platform :ios do
 
   desc "test"
   lane :test do
-    # match(type: "appstore")
+    # match(type: "adhoc")
     build_app(scheme: "customerrepresentativestatus",
-    export_method: "app-store",
+    export_method: "ad-hoc",
     )
   end
 
@@ -37,7 +37,7 @@ platform :ios do
       readonly: is_ci
     )
     build_app(scheme: "customerrepresentativestatus",
-    export_method: "app-store",
+    export_method: "ad-hoc",
     )
     # upload_to_testflight
   end
