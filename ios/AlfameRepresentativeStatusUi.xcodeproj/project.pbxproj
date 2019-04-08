@@ -1235,8 +1235,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfame.custreprst;
 				PRODUCT_NAME = AlfameRepresentativeStatusUi;
-				PROVISIONING_PROFILE = "cb911c6b-3b04-4b00-9727-9f9b945523c5";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.alfame.custreprst";
+				PROVISIONING_PROFILE = "cee01285-a8ef-41a8-a31e-29ea2f3dcfea";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.alfame.custreprst";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1259,8 +1259,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfame.custreprst;
 				PRODUCT_NAME = AlfameRepresentativeStatusUi;
-				PROVISIONING_PROFILE = "cb911c6b-3b04-4b00-9727-9f9b945523c5";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.alfame.custreprst";
+				PROVISIONING_PROFILE = "cee01285-a8ef-41a8-a31e-29ea2f3dcfea";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.alfame.custreprst";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
