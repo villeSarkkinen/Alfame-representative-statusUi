@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { leadColor, dealColor } from './utils/constants';
 import WhiteText from './WhiteText';
 
-import type { MemberType } from './utils/dataTypes';
+import type { MemberType, LeadType, DealType } from './utils/dataTypes';
 
 const flexStyleProps = {
         flex: 1
@@ -87,10 +88,15 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     deal: {
-        backgroundColor: '#1976D2'
+        backgroundColor: dealColor
     },
     lead: {
-        backgroundColor: '#67a1e4'
+        backgroundColor: leadColor
+    },
+    dataMargin: {
+        marginLeft: 1,
+        borderWidth: 1,
+        borderColor: 'black'
     }
 })
 

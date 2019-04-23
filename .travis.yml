@@ -65,6 +65,8 @@ jobs:
       # if: branch = staging
       os: osx
       osx_image: xcode9.0
+      env: 
+        - secure: "dFeaBZ2JU8/c5YKA853Ul2rhFQFbpaHtUC/GK/OPpoPN31JnFquW+ndmP1HEvUGxxoA7dEaUyJQHWwJ/tjxeEQOJAyglN23CgaWv0NMXRggFa3OJLno2Vj2Q0rQhZYktEchRcYvLKrjsM+FBez0DBmmqXMz3/KGTY+2Iz3u1Ge6u4lUh1q1AKX9iVIB+KTh2+VwY+2TKLJwndBLR+aQz3cWuIpVwte0BHGDTBmK49xXPU4dK17pF+yOuPTBp7c0SKT4krWHnxGg5YQR0BnlPKsvVXEtzeuXsnMDrlsH12IoWmTAqMYDWegjC73Gs7CCD3M4NJ8EH7vtA9Q2LbjnC7en7JdZk8ZJtNo9p9z9OuVJlRcTkTSPDV4mwt+pVzp800urNuvGDritzW4ezcLHCQ/hBLcqNERfaNVZesJnGqWivJzJK+Hj34vx+xOQ9v8J7+RlqnczBV+m28Z8ki0ZSKLecICmoa0InyavKpF8LHtXOARssGCb2Hv668Bj0fDDW9mruPSZZJYEv7yhRMB3RP9RjYjHaSpxyYsFhDpvoZcBrHd7l8Wxw+ZeO+Ww6lb1cXw+gw2pg3kplHmpUXgEfgS22qcne2XYGkogDgST23dnrVMzvJwk1ZWthtuUWKaRLw9FnsxYMfQ9ZOF+HDnhidIyyV8gVuDvpddYTDCX8cII="
       warnings_are_errors: false
       node_js: false
       before_install: 

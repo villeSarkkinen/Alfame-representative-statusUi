@@ -31,7 +31,8 @@ const LoginScreen = ({ emailMsg, passMsg, login, isLoading, isAuthenticated}: {
     return (
     <View>
         {isAuthenticated ? <Redirect to='/' /> :
-        <><ValidatingInput
+        <>
+        <ValidatingInput
             placeHolder="Email"
             onTextChange={setEmail}
             isValid={emailMsg === ''}
